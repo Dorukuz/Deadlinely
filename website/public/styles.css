@@ -1,0 +1,277 @@
+:root {
+  --blue: #3b9ae8;
+  --blue-dark: #2a7fc4;
+  --blue-soft: #e8f4fd;
+  --green: #58cc02;
+  --green-shadow: #46a302;
+  --navy: #1e2a3a;
+  --grey: #5c6b7a;
+  --border: #e4e9ef;
+  --bg: #f7f9fc;
+  --white: #ffffff;
+  --radius: 16px;
+  --font: "SF Pro Rounded", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--navy);
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 45%, #eef5fb 100%);
+  min-height: 100vh;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--blue-dark);
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+.wrap {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+.nav a:hover {
+  color: var(--navy);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.35rem;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--green-shadow);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.03);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--navy);
+  border: 2px solid var(--border);
+  box-shadow: 0 3px 0 #d8dee6;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem 0 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .hero {
+    grid-template-columns: 1.05fr 0.95fr;
+    padding: 3rem 0 4.5rem;
+  }
+}
+
+.hero-copy h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+}
+
+.hero-copy p.lead {
+  font-size: 1.125rem;
+  color: var(--grey);
+  margin: 0 0 1.5rem;
+  max-width: 34rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-visual {
+  text-align: center;
+}
+
+.hero-visual img {
+  width: min(320px, 80%);
+  height: auto;
+  filter: drop-shadow(0 24px 40px rgba(30, 42, 58, 0.12));
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.features {
+  padding: 2rem 0 4rem;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin: 0 0 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.35rem;
+  box-shadow: 0 8px 24px rgba(30, 42, 58, 0.05);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--grey);
+  font-size: 0.95rem;
+}
+
+.legal {
+  padding: 2.5rem 0 4rem;
+}
+
+.legal article {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal h1 {
+  margin-top: 0;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+.legal h2 {
+  font-size: 1.15rem;
+  margin-top: 2rem;
+}
+
+.legal p,
+.legal li {
+  color: var(--grey);
+}
+
+.legal ul {
+  padding-left: 1.25rem;
+}
+
+.site-footer {
+  border-top: 2px solid var(--border);
+  padding: 2rem 0;
+  margin-top: auto;
+  color: var(--grey);
+  font-size: 0.9rem;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-weight: 600;
+}

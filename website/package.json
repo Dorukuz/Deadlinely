@@ -1,0 +1,9 @@
+{
+  "name": "deadlinely-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Marketing and legal pages for Deadlinely",
+  "scripts": {
+    "build": "bash build.sh"
+  }
+}

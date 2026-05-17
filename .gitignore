@@ -1,0 +1,14 @@
+.DS_Store
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+build-screenshots/
+Config/Secrets.xcconfig
+**/Secrets.xcconfig
+qa-output/
+*.ipa
+*.dSYM.zip
+
+website/dist/
+metadata-pulled/
