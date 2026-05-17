@@ -40,6 +40,16 @@ docker run -p 8080:80 deadlinely-web
 
 Point `deadlinely.gatex.uk` to your Coolify server. Enable HTTPS in Coolify.
 
+### Links go to `localhost:8080`?
+
+In Coolify, set the public URL to `https://deadlinely.gatex.uk` (not `http://localhost:8080`). Redeploy after changing it.
+
+`build.sh` bakes `https://deadlinely.gatex.uk` into HTML links. Override only for local preview:
+
+```bash
+SITE_URL=http://127.0.0.1:8080 ./build.sh
+```
+
 ## App Store URLs (after deploy)
 
 Update ASC metadata to:
