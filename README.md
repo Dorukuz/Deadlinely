@@ -20,7 +20,7 @@ Your previous failure (`/app/dist: not found`) happens when the build step never
 
 | Setting | Value |
 |--------|--------|
-| **Base directory** | `Deadlinely/website` |
+| **Base directory** | `.` (repo root) |
 | **Build command** | `bash build.sh` or `npm run build` |
 | **Publish directory** | `dist` |
 | **Port** | `80` |
